@@ -2,9 +2,9 @@
 FAIL: test_add_two_zero (PythonStudy.unit_test.unit_test.TestMathMethod)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/Users/LiQingChun/Desktop/PythonStudy/PythonStudy/unit_test/unit_test.py", line 44, in test_add_two_zero
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/unit_test/unit_test.py", line 44, in test_add_two_zero
     raise e
-  File "/Users/LiQingChun/Desktop/PythonStudy/PythonStudy/unit_test/unit_test.py", line 41, in test_add_two_zero
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/unit_test/unit_test.py", line 41, in test_add_two_zero
     self.assertEqual(1, res, "两个0相加出错了")
 AssertionError: 1 != 0 : 两个0相加出错了
 
