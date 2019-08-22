@@ -24,6 +24,15 @@ from PythonStudy.unit_test.math_method import MathMethod
 class TestMathMethod(unittest.TestCase):  # 继承了unittest里面的TestCase，专门用来写测试用例
     # 一个用例就是一个函数，不能传参，只有self关键字
     # 所有的用例（所有的函数都是test开头），不以test开头，无法识别它是一条用例
+
+    #setUp执行每一条测试用例之前会执行setUp
+    #tearDown 每一条测试用例执行完毕之后都会执行tearDown
+    def setUp(self) -> None:#重写
+        print("我要开始执行测试用例了")
+
+    def tearDown(self) -> None:
+        print("测试用例执行完毕")
+
     def test_add_two_positive(self):
         res = MathMethod(1, 1).add()
         print("1+1的结果值是", res)
