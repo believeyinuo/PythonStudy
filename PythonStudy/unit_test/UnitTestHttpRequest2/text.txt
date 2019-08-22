@@ -1,0 +1,35 @@
+FF.F
+======================================================================
+FAIL: test_no_name_login (PythonStudy.unit_test.UnitTestHttpRequest.test_http_request.TestHttpRequest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/unit_test/UnitTestHttpRequest/test_http_request.py", line 54, in test_no_name_login
+    raise e
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/unit_test/UnitTestHttpRequest/test_http_request.py", line 51, in test_no_name_login
+    self.assertEqual(1000, no_name_login_res.json()["code"])
+AssertionError: 1000 != '999'
+
+======================================================================
+FAIL: test_no_pwd_login (PythonStudy.unit_test.UnitTestHttpRequest.test_http_request.TestHttpRequest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/unit_test/UnitTestHttpRequest/test_http_request.py", line 75, in test_no_pwd_login
+    raise e
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/unit_test/UnitTestHttpRequest/test_http_request.py", line 72, in test_no_pwd_login
+    self.assertEqual(1000, no_pwd_login_res.json()["code"])
+AssertionError: 1000 != '999'
+
+======================================================================
+FAIL: test_wrong_pwd_login (PythonStudy.unit_test.UnitTestHttpRequest.test_http_request.TestHttpRequest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/unit_test/UnitTestHttpRequest/test_http_request.py", line 96, in test_wrong_pwd_login
+    raise e
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/unit_test/UnitTestHttpRequest/test_http_request.py", line 93, in test_wrong_pwd_login
+    self.assertEqual(1000, wrong_pwd_login_res.json()["code"])
+AssertionError: 1000 != '120'
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.155s
+
+FAILED (failures=3)

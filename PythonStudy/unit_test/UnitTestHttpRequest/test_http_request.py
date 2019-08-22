@@ -10,7 +10,6 @@ import unittest
 from PythonStudy.unit_test.UnitTestHttpRequest.http_request import HttpRequest
 from PythonStudy.reflection.get_data import GetData
 
-
 # COOKIE = None
 # 第二条用例需要用到第一条用例的返回结果的某些值，怎么处理以来关系
 # 1、全局变量  缺点：关联性比较强，一步错步步错
@@ -18,10 +17,11 @@ from PythonStudy.reflection.get_data import GetData
 # 3、setUp  缺点：关联性比较强，一步错步步错
 
 
-test_data = [{"data":{"mobilephone":"18688773467", "pwd" : "123456"}, "expected":1000},
-             {"data":{"mobilephone":"18688773467", "pwd" : ""}, "expected":999},
-             {"data":{"mobilephone":"", "pwd" : "123456"}, "expected":999},
-             {"data":{"mobilephone":"18688773467", "pwd" : "12345678"}, "expected":120}];
+test_data = [{"data": {"mobilephone": "18688773467", "pwd": "123456"}, "expected": "1000"},
+             {"data": {"mobilephone": "18688773467", "pwd": ""}, "expected": "999"},
+             {"data": {"mobilephone": "", "pwd": "123456"}, "expected": "999"},
+             {"data": {"mobilephone": "18688773467", "pwd": "12345678"}, "expected": "120"}];
+
 
 class TestHttpRequest(unittest.TestCase):
     def setUp(self) -> None:
@@ -45,6 +45,7 @@ class TestHttpRequest(unittest.TestCase):
     def tearDown(self) -> None:
         print("测试用例执行完毕")
 
+    # 一个test代表一条用例，用for循环没用
     def test_normal_login(self):
         # global COOKIE  # 声明全局变量
         if self.normal_login_res.cookies:
