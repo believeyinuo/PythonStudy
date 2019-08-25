@@ -31,5 +31,5 @@ print("url:{}, 类型是{}".format(sheet.cell(1, 1).value, type(sheet.cell(1, 1)
 # 请完成数据参数化+结合Excel
 # 1、把数据存到excel
 # 2、利用openpyxl写一个专门读取excel里面测试数据的类
-# 3、结合单元测试方法，通过舒适化函数传参的方法，完成单元测试
+# 3、结合单元测试方法，通过初始化函数传参的方法，完成单元测试
 # 4、操作excel的类，test_suite、test_http类
