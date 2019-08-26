@@ -10,6 +10,10 @@ eval(s)
 a = '{"age":18}'
 eval(s)
 
+# 一次性读取所有数据 对内存要求高点
+# 用的时候读取所有数据 磁盘读写要求高点
+# 磁盘->内存->CPU
+
 from openpyxl import load_workbook
 
 
@@ -36,15 +40,30 @@ class DoExcel:
         self.sheet_name = sheet_name
         self.sheet_obj = load_workbook(self.file_name)[self.sheet_name]
 
+    def get_header(self):
+        # 获取第一行的标题行
+        wb = load_workbook(self.file_name)
+        sheet = wb[self.sheet_name]
+
+        header = []  # 存储标题行
+        for j in range(1, sheet.max_column + 1):
+            header.append(sheet.cell(1, j).value)
+        return header
+
     def get_data(self):
+        # 根据嵌套循环读取数据
         wb = load_workbook(self.file_name)
         sheet = wb[self.sheet_name]
         test_data = []
-        for i in range(1, sheet.max_row + 1):
-            sub_data = {'method': sheet.cell(i, 1).value,
-                        'url': sheet.cell(i, 1).value,
-                        'data': sheet.cell(i, 1).value,
-                        'expected': sheet.cell(i, 1).value}
+        header = self.get_header()
+        for i in range(2, sheet.max_row + 2):
+            sub_data = {}
+            for j in range(1, sheet.max_column + 1):
+                sub_data[header[j-1]] = sheet.cell(i, j).value
+            # sub_data = {'method': sheet.cell(i, 1).value,
+            #             'url': sheet.cell(i, 1).value,
+            #             'data': sheet.cell(i, 1).value,
+            #             'expected': sheet.cell(i, 1).value}
 
             test_data.append(sub_data)
             return test_data
