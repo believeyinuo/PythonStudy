@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2028953-4802-4609-a690-77b2100497fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PythonStudy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PythonStudy.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/__init__.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,6 +90,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PythonStudy/review_first_stage_48/review_function.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -109,6 +112,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PythonStudy/review_first_stage_48/review_inherit_son.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -130,6 +134,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PythonStudy/review_first_stage_48/test_suite.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -183,7 +188,8 @@
       <updated>1566388027797</updated>
       <workItem from="1566441712665" duration="13669000" />
       <workItem from="1566465057748" duration="1556000" />
-      <workItem from="1566785959098" duration="12225000" />
+      <workItem from="1566785959098" duration="13067000" />
+      <workItem from="1566896567918" duration="1013000" />
     </task>
     <servers />
   </component>
