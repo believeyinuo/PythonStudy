@@ -2,6 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2028953-4802-4609-a690-77b2100497fc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/PythonStudy/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/learn/http_request.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/learn/learn_pandas.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/run.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/test_data/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/test_data/interface_auto_practice.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools/do_excel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools/get_cookie.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools/http_requester.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/PythonStudy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PythonStudy.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -31,16 +41,20 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/PythonStudy/review_first_stage_48" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools" />
+      <recent name="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/test_data" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50" />
       <recent name="$PROJECT_DIR$/PythonStudy/review_first_stage_48" />
       <recent name="$PROJECT_DIR$/PythonStudy/config_46/home_work" />
       <recent name="$PROJECT_DIR$/PythonStudy/config_46" />
       <recent name="$PROJECT_DIR$/PythonStudy/ddt_44" />
-      <recent name="$PROJECT_DIR$/PythonStudy/44_ddt" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -55,8 +69,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.unit_test_suite_http_request">
-    <configuration name="do_config" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.run">
+    <configuration name="do_excel" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonStudy" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -64,12 +78,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PythonStudy/config_46" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PythonStudy/config_46/do_config.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools/do_excel.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -78,7 +91,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="review" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="http_requester" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonStudy" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -86,12 +99,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PythonStudy/review_first_stage_48" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PythonStudy/review_first_stage_48/review_function.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools/http_requester.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -100,7 +112,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="review_inherit_son" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="run" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonStudy" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -108,12 +120,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PythonStudy/review_first_stage_48" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PythonStudy/review_first_stage_48/review_inherit_son.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/run.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -168,11 +179,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.run" />
+        <item itemvalue="Python.http_requester" />
+        <item itemvalue="Python.do_excel" />
         <item itemvalue="Python.unit_test_suite_http_request" />
         <item itemvalue="Python.test_suite" />
-        <item itemvalue="Python.review_inherit_son" />
-        <item itemvalue="Python.review" />
-        <item itemvalue="Python.do_config" />
       </list>
     </recent_temporary>
   </component>
