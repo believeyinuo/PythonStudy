@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2028953-4802-4609-a690-77b2100497fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/PythonStudy/review_first_stage_48/http_request.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PythonStudy/review_first_stage_48/review_function.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PythonStudy/review_first_stage_48/review_inherit_father.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PythonStudy/review_first_stage_48/review_inherit_son.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PythonStudy/review_first_stage_48/review_unittest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PythonStudy/review_first_stage_48/test_http_request.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PythonStudy/review_first_stage_48/test_suite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PythonStudy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PythonStudy.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PythonStudy/review_first_stage_48/review.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +53,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test_suite">
+  <component name="RunManager" selected="Python.unit_test_suite_http_request">
     <configuration name="do_config" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonStudy" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -172,10 +163,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.unit_test_suite_http_request" />
         <item itemvalue="Python.test_suite" />
         <item itemvalue="Python.review_inherit_son" />
         <item itemvalue="Python.review" />
-        <item itemvalue="Python.unit_test_suite_http_request" />
         <item itemvalue="Python.do_config" />
       </list>
     </recent_temporary>
