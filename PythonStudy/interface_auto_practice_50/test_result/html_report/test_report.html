@@ -1,0 +1,1141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>这个是单元测试报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { }
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+a.popup_link:hover {
+    color: red;
+}
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 500px;
+}
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#result_table td {
+    border: 1px solid #777;
+    padding: 2px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; }
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+<div class='heading'>
+<h1>这个是单元测试报告</h1>
+<p class='attribute'><strong>执行开始时间:</strong> 2019-08-28 16:26:01</p>
+<p class='attribute'><strong>执行用时:</strong> 0:00:01.496897</p>
+<p class='attribute'><strong>执行状态:</strong> 通过数 5 报错数 33</p>
+
+<p class='description'>这个是单元测试报告</p>
+</div>
+
+
+<p id='show_detail_line'>展示方式
+<a href='javascript:showCase(0)'>概览</a>
+<a href='javascript:showCase(1)'>失败</a>
+<a href='javascript:showCase(2)'>全部</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>测试集群/测试用例</td>
+    <td>数量</td>
+    <td>通过</td>
+    <td>失败</td>
+    <td>报错</td>
+    <td>查看</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>PythonStudy.interface_auto_practice_50.tools.unit_test_http_request.TestHttpRequest</td>
+    <td>38</td>
+    <td>5</td>
+    <td>0</td>
+    <td>33</td>
+    <td><a href="javascript:showClassDetail('c1',38)">详情</a></td>
+</tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_http_request_01</div></td>
+    <td colspan='5' align='center'>通过</td>
+</tr>
+
+<tr id='pt1.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_http_request_02</div></td>
+    <td colspan='5' align='center'>通过</td>
+</tr>
+
+<tr id='pt1.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_http_request_03</div></td>
+    <td colspan='5' align='center'>通过</td>
+</tr>
+
+<tr id='pt1.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_http_request_04</div></td>
+    <td colspan='5' align='center'>通过</td>
+</tr>
+
+<tr id='pt1.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_http_request_05</div></td>
+    <td colspan='5' align='center'>通过</td>
+</tr>
+
+<tr id='ft1.6' class='none'>
+    <td class='errorCase'><div class='testcase'>test_http_request_06</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.6')" >
+        报错</a>
+    <div id='div_ft1.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.6: Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/venv/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py", line 29, in test_http_request
+    res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
+TypeError: eval() arg 1 must be a string, bytes or code object
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='ft1.7' class='none'>
+    <td class='errorCase'><div class='testcase'>test_http_request_07</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.7')" >
+        报错</a>
+    <div id='div_ft1.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.7: Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/venv/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py", line 29, in test_http_request
+    res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
+TypeError: eval() arg 1 must be a string, bytes or code object
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='ft1.8' class='none'>
+    <td class='errorCase'><div class='testcase'>test_http_request_08</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.8')" >
+        报错</a>
+    <div id='div_ft1.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.8: Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/venv/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py", line 29, in test_http_request
+    res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
+TypeError: eval() arg 1 must be a string, bytes or code object
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='ft1.9' class='none'>
+    <td class='errorCase'><div class='testcase'>test_http_request_09</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.9')" >
+        报错</a>
+    <div id='div_ft1.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.9: Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/venv/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py", line 29, in test_http_request
+    res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
+TypeError: eval() arg 1 must be a string, bytes or code object
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='ft1.10' class='none'>
+    <td class='errorCase'><div class='testcase'>test_http_request_10</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.10')" >
+        报错</a>
+    <div id='div_ft1.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.10: Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/venv/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py", line 29, in test_http_request
+    res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
+TypeError: eval() arg 1 must be a string, bytes or code object
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='ft1.11' class='none'>
+    <td class='errorCase'><div class='testcase'>test_http_request_11</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.11')" >
+        报错</a>
+    <div id='div_ft1.11' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.11').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.11: Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/venv/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py", line 29, in test_http_request
+    res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
+TypeError: eval() arg 1 must be a string, bytes or code object
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='ft1.12' class='none'>
+    <td class='errorCase'><div class='testcase'>test_http_request_12</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.12')" >
+        报错</a>
+    <div id='div_ft1.12' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.12').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.12: Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/venv/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py", line 29, in test_http_request
+    res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
+TypeError: eval() arg 1 must be a string, bytes or code object
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='ft1.13' class='none'>
+    <td class='errorCase'><div class='testcase'>test_http_request_13</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.13')" >
+        报错</a>
+    <div id='div_ft1.13' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.13').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.13: Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/venv/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py", line 29, in test_http_request
+    res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
+TypeError: eval() arg 1 must be a string, bytes or code object
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='ft1.14' class='none'>
+    <td class='errorCase'><div class='testcase'>test_http_request_14</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.14')" >
+        报错</a>
+    <div id='div_ft1.14' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.14').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.14: Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/venv/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py", line 29, in test_http_request
+    res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
+TypeError: eval() arg 1 must be a string, bytes or code object
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='ft1.15' class='none'>
+    <td class='errorCase'><div class='testcase'>test_http_request_15</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.15')" >
+        报错</a>
+    <div id='div_ft1.15' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.15').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.15: Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/venv/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py", line 29, in test_http_request
+    res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
+TypeError: eval() arg 1 must be a string, bytes or code object
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='ft1.16' class='none'>
+    <td class='errorCase'><div class='testcase'>test_http_request_16</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.16')" >
+        报错</a>
+    <div id='div_ft1.16' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.16').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.16: Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/venv/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py", line 29, in test_http_request
+    res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
+TypeError: eval() arg 1 must be a string, bytes or code object
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='ft1.17' class='none'>
+    <td class='errorCase'><div class='testcase'>test_http_request_17</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.17')" >
+        报错</a>
+    <div id='div_ft1.17' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.17').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.17: Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/venv/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py", line 29, in test_http_request
+    res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
+TypeError: eval() arg 1 must be a string, bytes or code object
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='ft1.18' class='none'>
+    <td class='errorCase'><div class='testcase'>test_http_request_18</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.18')" >
+        报错</a>
+    <div id='div_ft1.18' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.18').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.18: Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/venv/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py", line 29, in test_http_request
+    res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
+TypeError: eval() arg 1 must be a string, bytes or code object
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='ft1.19' class='none'>
+    <td class='errorCase'><div class='testcase'>test_http_request_19</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.19')" >
+        报错</a>
+    <div id='div_ft1.19' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.19').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.19: Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/venv/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py", line 29, in test_http_request
+    res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
+TypeError: eval() arg 1 must be a string, bytes or code object
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='ft1.20' class='none'>
+    <td class='errorCase'><div class='testcase'>test_http_request_20</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.20')" >
+        报错</a>
+    <div id='div_ft1.20' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.20').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.20: Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/venv/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py", line 29, in test_http_request
+    res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
+TypeError: eval() arg 1 must be a string, bytes or code object
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='ft1.21' class='none'>
+    <td class='errorCase'><div class='testcase'>test_http_request_21</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.21')" >
+        报错</a>
+    <div id='div_ft1.21' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.21').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.21: Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/venv/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py", line 29, in test_http_request
+    res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
+TypeError: eval() arg 1 must be a string, bytes or code object
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='ft1.22' class='none'>
+    <td class='errorCase'><div class='testcase'>test_http_request_22</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.22')" >
+        报错</a>
+    <div id='div_ft1.22' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.22').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.22: Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/venv/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py", line 29, in test_http_request
+    res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
+TypeError: eval() arg 1 must be a string, bytes or code object
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='ft1.23' class='none'>
+    <td class='errorCase'><div class='testcase'>test_http_request_23</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.23')" >
+        报错</a>
+    <div id='div_ft1.23' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.23').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.23: Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/venv/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py", line 29, in test_http_request
+    res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
+TypeError: eval() arg 1 must be a string, bytes or code object
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='ft1.24' class='none'>
+    <td class='errorCase'><div class='testcase'>test_http_request_24</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.24')" >
+        报错</a>
+    <div id='div_ft1.24' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.24').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.24: Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/venv/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py", line 29, in test_http_request
+    res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
+TypeError: eval() arg 1 must be a string, bytes or code object
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='ft1.25' class='none'>
+    <td class='errorCase'><div class='testcase'>test_http_request_25</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.25')" >
+        报错</a>
+    <div id='div_ft1.25' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.25').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.25: Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/venv/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py", line 29, in test_http_request
+    res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
+TypeError: eval() arg 1 must be a string, bytes or code object
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='ft1.26' class='none'>
+    <td class='errorCase'><div class='testcase'>test_http_request_26</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.26')" >
+        报错</a>
+    <div id='div_ft1.26' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.26').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.26: Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/venv/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py", line 29, in test_http_request
+    res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
+TypeError: eval() arg 1 must be a string, bytes or code object
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='ft1.27' class='none'>
+    <td class='errorCase'><div class='testcase'>test_http_request_27</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.27')" >
+        报错</a>
+    <div id='div_ft1.27' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.27').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.27: Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/venv/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py", line 29, in test_http_request
+    res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
+TypeError: eval() arg 1 must be a string, bytes or code object
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='ft1.28' class='none'>
+    <td class='errorCase'><div class='testcase'>test_http_request_28</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.28')" >
+        报错</a>
+    <div id='div_ft1.28' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.28').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.28: Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/venv/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py", line 29, in test_http_request
+    res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
+TypeError: eval() arg 1 must be a string, bytes or code object
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='ft1.29' class='none'>
+    <td class='errorCase'><div class='testcase'>test_http_request_29</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.29')" >
+        报错</a>
+    <div id='div_ft1.29' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.29').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.29: Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/venv/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py", line 29, in test_http_request
+    res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
+TypeError: eval() arg 1 must be a string, bytes or code object
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='ft1.30' class='none'>
+    <td class='errorCase'><div class='testcase'>test_http_request_30</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.30')" >
+        报错</a>
+    <div id='div_ft1.30' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.30').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.30: Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/venv/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py", line 29, in test_http_request
+    res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
+TypeError: eval() arg 1 must be a string, bytes or code object
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='ft1.31' class='none'>
+    <td class='errorCase'><div class='testcase'>test_http_request_31</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.31')" >
+        报错</a>
+    <div id='div_ft1.31' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.31').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.31: Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/venv/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py", line 29, in test_http_request
+    res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
+TypeError: eval() arg 1 must be a string, bytes or code object
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='ft1.32' class='none'>
+    <td class='errorCase'><div class='testcase'>test_http_request_32</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.32')" >
+        报错</a>
+    <div id='div_ft1.32' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.32').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.32: Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/venv/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py", line 29, in test_http_request
+    res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
+TypeError: eval() arg 1 must be a string, bytes or code object
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='ft1.33' class='none'>
+    <td class='errorCase'><div class='testcase'>test_http_request_33</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.33')" >
+        报错</a>
+    <div id='div_ft1.33' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.33').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.33: Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/venv/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py", line 29, in test_http_request
+    res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
+TypeError: eval() arg 1 must be a string, bytes or code object
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='ft1.34' class='none'>
+    <td class='errorCase'><div class='testcase'>test_http_request_34</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.34')" >
+        报错</a>
+    <div id='div_ft1.34' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.34').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.34: Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/venv/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py", line 29, in test_http_request
+    res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
+TypeError: eval() arg 1 must be a string, bytes or code object
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='ft1.35' class='none'>
+    <td class='errorCase'><div class='testcase'>test_http_request_35</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.35')" >
+        报错</a>
+    <div id='div_ft1.35' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.35').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.35: Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/venv/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py", line 29, in test_http_request
+    res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
+TypeError: eval() arg 1 must be a string, bytes or code object
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='ft1.36' class='none'>
+    <td class='errorCase'><div class='testcase'>test_http_request_36</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.36')" >
+        报错</a>
+    <div id='div_ft1.36' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.36').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.36: Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/venv/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py", line 29, in test_http_request
+    res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
+TypeError: eval() arg 1 must be a string, bytes or code object
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='ft1.37' class='none'>
+    <td class='errorCase'><div class='testcase'>test_http_request_37</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.37')" >
+        报错</a>
+    <div id='div_ft1.37' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.37').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.37: Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/venv/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py", line 29, in test_http_request
+    res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
+TypeError: eval() arg 1 must be a string, bytes or code object
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='ft1.38' class='none'>
+    <td class='errorCase'><div class='testcase'>test_http_request_38</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.38')" >
+        报错</a>
+    <div id='div_ft1.38' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.38').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.38: Traceback (most recent call last):
+  File "/Users/szdl/Desktop/PythonStudy/venv/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py", line 29, in test_http_request
+    res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
+TypeError: eval() arg 1 must be a string, bytes or code object
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td>总计</td>
+    <td>38</td>
+    <td>5</td>
+    <td>0</td>
+    <td>33</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+</body>
+</html>

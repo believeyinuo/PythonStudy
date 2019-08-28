@@ -6,7 +6,7 @@
 
 import pandas as pd
 
-df = pd.read_excel("test_data.xlsx", sheet_name = "rechatge")
+df = pd.read_excel("interface_auto_practice.xlsx", sheet_name = "recharge")
 print(df.values)
 print(df.ix[1])         # 读指定行  二维矩阵
 print(df.ix[1].values)  # 读指定行  列表
@@ -20,4 +20,4 @@ test_data = []
 for i in df.index.values:
     row_data = df.ix[i, ["url", "data"]].todict()
     test_data.append(row_data)
-print(test_Data)
+print(test_data)
