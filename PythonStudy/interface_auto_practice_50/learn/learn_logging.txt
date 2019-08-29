@@ -1,0 +1,4 @@
+debug
+error
+2019-08-29 11:29:32,103-DEBUG-learn_logging.py-python11-日志信息:debug
+2019-08-29 11:29:32,105-ERROR-learn_logging.py-python11-日志信息:error
