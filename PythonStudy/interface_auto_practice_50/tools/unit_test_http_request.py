@@ -8,7 +8,7 @@
 import unittest
 from PythonStudy.interface_auto_practice_50.tools.http_request import HttpRequest
 from PythonStudy.interface_auto_practice_50.tools.do_excel import DoExcel
-from PythonStudy.interface_auto_practice_50.tools.get_cookie import GetCookie
+from PythonStudy.interface_auto_practice_50.tools.get_data import GetCookie
 from ddt import ddt, data  # 列表嵌套列表，列表嵌套字典
 from PythonStudy.interface_auto_practice_50.tools.project_path import *
 

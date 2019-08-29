@@ -7,7 +7,7 @@
 
 from PythonStudy.interface_auto_practice_50.tools.unit_test_http_request import TestHttpRequest
 from PythonStudy.interface_auto_practice_50.tools.do_excel import DoExcel
-from PythonStudy.interface_auto_practice_50.tools.get_cookie import GetCookie
+from PythonStudy.interface_auto_practice_50.tools.get_data import GetCookie
 from PythonStudy.interface_auto_practice_50.tools.project_path import *
 import unittest
 import HTMLTestRunner
