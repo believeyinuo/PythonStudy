@@ -26,6 +26,7 @@ class TestHttpRequest(unittest.TestCase):
 
     @data(*test_data)
     def test_http_request(self, item):
+        #请求之前完成loan_id的替换
         res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetCookie, "Cookie"))
         if res.cookies:
             setattr(GetCookie, "Cookie", res.cookies)

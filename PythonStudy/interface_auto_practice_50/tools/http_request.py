@@ -5,6 +5,7 @@
 #File : http_request.py
 
 import requests
+from PythonStudy.interface_auto_practice_50.tools.do_logging import MyLog
 
 
 class HttpRequest:
@@ -17,8 +18,10 @@ class HttpRequest:
                 res = requests.post(url, data, cookies=cookie)
             else:
                 print("输入的请求方法不对")
+                MyLog().error("输入的请求方法不对")
         except Exception as e:
             print("请求报错了:{0}".format(e))
+            MyLog().error("请求报错了:{0}".format(e))
             raise e
         return res
 

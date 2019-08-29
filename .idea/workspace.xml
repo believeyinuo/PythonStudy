@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2028953-4802-4609-a690-77b2100497fc" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/learn/learn_str_replace.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/PythonStudy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PythonStudy.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -9,6 +10,69 @@
       <change beforePath="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/run.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools/do_excel.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools/do_excel.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools/get_cookie.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools/get_data.py" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/learn/learn_logging.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools/do_logging.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools/do_mysql.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/MySQLdb/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/MySQLdb/_exceptions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/MySQLdb/_mysql.cpython-37m-darwin.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/MySQLdb/compat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/MySQLdb/connections.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/MySQLdb/constants/CLIENT.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/MySQLdb/constants/CR.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/MySQLdb/constants/ER.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/MySQLdb/constants/FIELD_TYPE.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/MySQLdb/constants/FLAG.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/MySQLdb/constants/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/MySQLdb/converters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/MySQLdb/cursors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/MySQLdb/release.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/MySQLdb/times.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/PyMySQL-0.9.3.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/PyMySQL-0.9.3.dist-info/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/PyMySQL-0.9.3.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/PyMySQL-0.9.3.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/PyMySQL-0.9.3.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/PyMySQL-0.9.3.dist-info/pbr.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/PyMySQL-0.9.3.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/mysql-0.0.2-py3.7.egg-info/PKG-INFO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/mysql-0.0.2-py3.7.egg-info/SOURCES.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/mysql-0.0.2-py3.7.egg-info/dependency_links.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/mysql-0.0.2-py3.7.egg-info/installed-files.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/mysql-0.0.2-py3.7.egg-info/requires.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/mysql-0.0.2-py3.7.egg-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/mysqlclient-1.4.4-py3.7.egg-info/PKG-INFO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/mysqlclient-1.4.4-py3.7.egg-info/SOURCES.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/mysqlclient-1.4.4-py3.7.egg-info/dependency_links.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/mysqlclient-1.4.4-py3.7.egg-info/installed-files.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/mysqlclient-1.4.4-py3.7.egg-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pymysql/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pymysql/_auth.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pymysql/_compat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pymysql/_socketio.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pymysql/charset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pymysql/connections.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pymysql/constants/CLIENT.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pymysql/constants/COMMAND.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pymysql/constants/CR.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pymysql/constants/ER.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pymysql/constants/FIELD_TYPE.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pymysql/constants/FLAG.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pymysql/constants/SERVER_STATUS.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pymysql/constants/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pymysql/converters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pymysql/cursors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pymysql/err.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pymysql/optionfile.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pymysql/protocol.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pymysql/times.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pymysql/util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/test_data/interface_auto_practice.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/test_data/interface_auto_practice.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools/http_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools/http_request.py" afterDir="false" />
+>>>>>>> 4936d499418b83ad1371fe7ed3917ce7a4446288
       <change beforePath="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,7 +127,73 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.read_config">
+  <component name="RunManager" selected="Python.do_mysql">
+    <configuration name="do_logging" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PythonStudy" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools/do_logging.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="do_mysql" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PythonStudy" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools/do_mysql.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="learn_logging" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PythonStudy" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/learn" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/learn/learn_logging.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="project_path" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonStudy" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -108,65 +238,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="run" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="PythonStudy" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/run.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for unit_test_http_request.TestHttpRequest.test_http_request" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="PythonStudy" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;unit_test_http_request.TestHttpRequest.test_http_request&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests in unit_test_http_request.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="PythonStudy" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools/unit_test_http_request.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.do_mysql" />
+        <item itemvalue="Python.do_logging" />
+        <item itemvalue="Python.learn_logging" />
         <item itemvalue="Python.read_config" />
         <item itemvalue="Python.project_path" />
-        <item itemvalue="Python.run" />
-        <item itemvalue="Python tests.Unittests in unit_test_http_request.py" />
-        <item itemvalue="Python tests.Unittests for unit_test_http_request.TestHttpRequest.test_http_request" />
       </list>
     </recent_temporary>
   </component>
@@ -184,6 +262,10 @@
       <workItem from="1566465057748" duration="1556000" />
       <workItem from="1566785959098" duration="13067000" />
       <workItem from="1566896567918" duration="1013000" />
+      <workItem from="1567069667040" duration="75000" />
+      <workItem from="1567069745605" duration="313000" />
+      <workItem from="1567070098387" duration="230000" />
+      <workItem from="1567070479548" duration="848000" />
     </task>
     <servers />
   </component>
@@ -208,27 +290,30 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PythonStudy$http_request.coverage" NAME="http_request Coverage Results" MODIFIED="1566455147075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/interface_test/API_AUTO" />
-    <SUITE FILE_PATH="coverage/PythonStudy$unit_suite_http_request.coverage" NAME="unit_suite_http_request Coverage Results" MODIFIED="1566962503321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools" />
     <SUITE FILE_PATH="coverage/PythonStudy$Unittests_for_unit_test_http_request_TestHttpRequest_test_http_request.coverage" NAME="Unittests for unit_test_http_request.TestHttpRequest.test_http_request Coverage Results" MODIFIED="1566973261286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools" />
     <SUITE FILE_PATH="coverage/PythonStudy$do_config.coverage" NAME="do_config Coverage Results" MODIFIED="1566790670636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/config_46" />
     <SUITE FILE_PATH="coverage/PythonStudy$run.coverage" NAME="run Coverage Results" MODIFIED="1566980759090" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50" />
-    <SUITE FILE_PATH="coverage/PythonStudy$project_path.coverage" NAME="project_path Coverage Results" MODIFIED="1566981291272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools" />
+    <SUITE FILE_PATH="coverage/PythonStudy$do_logging.coverage" NAME="do_logging Coverage Results" MODIFIED="1567051978014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools" />
     <SUITE FILE_PATH="coverage/PythonStudy$unit_test_suite_http_request.coverage" NAME="unit_test_suite_http_request Coverage Results" MODIFIED="1566809303371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/config_46/home_work" />
-    <SUITE FILE_PATH="coverage/PythonStudy$Unittests_for_test_http_request_TestHttpRequest_test_no_name_login.coverage" NAME="Unittests for test_http_request.TestHttpRequest.test_no_name_login Coverage Results" MODIFIED="1566460216267" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/unit_test/UnitTestHttpRequest" />
-    <SUITE FILE_PATH="coverage/PythonStudy$Unittests_in_do_ddt_py.coverage" NAME="Unittests in do_ddt.py Coverage Results" MODIFIED="1566786791186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/44_ddt" />
     <SUITE FILE_PATH="coverage/PythonStudy$Unittests_for_ddt_RestMath_test_print_data.coverage" NAME="Unittests for ddt.RestMath.test_print_data Coverage Results" MODIFIED="1566785483504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/44_ddt" />
     <SUITE FILE_PATH="coverage/PythonStudy$variable_length_argument.coverage" NAME="variable_length_argument Coverage Results" MODIFIED="1566786418099" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/44_ddt" />
     <SUITE FILE_PATH="coverage/PythonStudy$Unittests_for_do_ddt_RestMath_test_print_data.coverage" NAME="Unittests for do_ddt.RestMath.test_print_data Coverage Results" MODIFIED="1566786662099" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/44_ddt" />
-    <SUITE FILE_PATH="coverage/PythonStudy$Unittests_for_test_http_request_TestHttpRequest_test_login.coverage" NAME="Unittests for test_http_request.TestHttpRequest.test_login Coverage Results" MODIFIED="1566455175398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/unit_test/UnitTestHttpRequest" />
-    <SUITE FILE_PATH="coverage/PythonStudy$Unittests_in_unit_test_http_request_py.coverage" NAME="Unittests in unit_test_http_request.py Coverage Results" MODIFIED="1566980245220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools" />
     <SUITE FILE_PATH="coverage/PythonStudy$reflection.coverage" NAME="reflection Coverage Results" MODIFIED="1566462650446" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/reflection" />
     <SUITE FILE_PATH="coverage/PythonStudy$test_suite.coverage" NAME="test_suite Coverage Results" MODIFIED="1566972581032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/review_first_stage_48" />
-    <SUITE FILE_PATH="coverage/PythonStudy$unit_test_02.coverage" NAME="unit_test_02 Coverage Results" MODIFIED="1566453352867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/unit_test" />
     <SUITE FILE_PATH="coverage/PythonStudy$Unittests_for_ddt_RestMath.coverage" NAME="Unittests for ddt.RestMath Coverage Results" MODIFIED="1566785612782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/44_ddt" />
+    <SUITE FILE_PATH="coverage/PythonStudy$do_mysql.coverage" NAME="do_mysql Coverage Results" MODIFIED="1567070482631" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools" />
+    <SUITE FILE_PATH="coverage/PythonStudy$do_excel.coverage" NAME="do_excel Coverage Results" MODIFIED="1566963808385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50" />
+    <SUITE FILE_PATH="coverage/PythonStudy$unit_suite_http_request.coverage" NAME="unit_suite_http_request Coverage Results" MODIFIED="1566962503321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools" />
+    <SUITE FILE_PATH="coverage/PythonStudy$project_path.coverage" NAME="project_path Coverage Results" MODIFIED="1566981291272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools" />
+    <SUITE FILE_PATH="coverage/PythonStudy$Unittests_for_test_http_request_TestHttpRequest_test_no_name_login.coverage" NAME="Unittests for test_http_request.TestHttpRequest.test_no_name_login Coverage Results" MODIFIED="1566460216267" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/unit_test/UnitTestHttpRequest" />
+    <SUITE FILE_PATH="coverage/PythonStudy$Unittests_in_do_ddt_py.coverage" NAME="Unittests in do_ddt.py Coverage Results" MODIFIED="1566786791186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/44_ddt" />
+    <SUITE FILE_PATH="coverage/PythonStudy$Unittests_for_test_http_request_TestHttpRequest_test_login.coverage" NAME="Unittests for test_http_request.TestHttpRequest.test_login Coverage Results" MODIFIED="1566455175398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/unit_test/UnitTestHttpRequest" />
+    <SUITE FILE_PATH="coverage/PythonStudy$Unittests_in_unit_test_http_request_py.coverage" NAME="Unittests in unit_test_http_request.py Coverage Results" MODIFIED="1566980245220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools" />
+    <SUITE FILE_PATH="coverage/PythonStudy$learn_logging.coverage" NAME="learn_logging Coverage Results" MODIFIED="1567049372003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/learn" />
+    <SUITE FILE_PATH="coverage/PythonStudy$unit_test_02.coverage" NAME="unit_test_02 Coverage Results" MODIFIED="1566453352867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/unit_test" />
     <SUITE FILE_PATH="coverage/PythonStudy$unit_test_http_request.coverage" NAME="unit_test_http_request Coverage Results" MODIFIED="1566460336729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/unit_test/UnitTestHttpRequest" />
     <SUITE FILE_PATH="coverage/PythonStudy$Unittests_for_do_ddt_RestMath.coverage" NAME="Unittests for do_ddt.RestMath Coverage Results" MODIFIED="1566787460903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/44_ddt" />
     <SUITE FILE_PATH="coverage/PythonStudy$Unittests_in_ddt_py.coverage" NAME="Unittests in ddt.py Coverage Results" MODIFIED="1566785651157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/44_ddt" />
     <SUITE FILE_PATH="coverage/PythonStudy$read_config.coverage" NAME="read_config Coverage Results" MODIFIED="1566981454968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50/tools" />
-    <SUITE FILE_PATH="coverage/PythonStudy$do_excel.coverage" NAME="do_excel Coverage Results" MODIFIED="1566963808385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonStudy/interface_auto_practice_50" />
   </component>
 </project>
