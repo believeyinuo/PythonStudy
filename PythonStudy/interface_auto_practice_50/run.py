@@ -6,12 +6,12 @@
 
 
 from PythonStudy.interface_auto_practice_50.tools.unit_test_http_request import TestHttpRequest
-from PythonStudy.interface_auto_practice_50.tools.do_excel import DoExcel
-from PythonStudy.interface_auto_practice_50.tools.get_data import GetCookie
+# from PythonStudy.interface_auto_practice_50.tools.do_excel import DoExcel
+# from PythonStudy.interface_auto_practice_50.tools.get_data import GetData
 from PythonStudy.interface_auto_practice_50.tools.project_path import *
 import unittest
 import HTMLTestRunner
-from PythonStudy.interface_auto_practice_50.tools import unit_test_http_request
+# from PythonStudy.interface_auto_practice_50.tools import unit_test_http_request
 
 suite = unittest.TestSuite()
 

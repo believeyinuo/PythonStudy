@@ -6,14 +6,42 @@
 # @Project : PythonStudy
 
 import pymysql
+from PythonStudy.interface_auto_practice_50.tools import project_path
+from PythonStudy.interface_auto_practice_50.tools.read_config import ReadConfig
 
-config = {'host':'119.23.241.154',
-          'user':'python',
-          'password':'python666',
-          'port':3306
 
-}
-# 创建一个数据库连接
-con = pymysql.Connect()
+class DoMysql:
 
-# 关键字参数的传递
+    # query-->>查询语句  state-->> all 多条， 1 -->> 一条
+    def do_mysql(self, query_sql, state = 'all'):
+
+        # 从配置文件里面读取db info
+        db_config = eval(ReadConfig().get_config(project_path.case_config_path, 'DB', 'db_config'))
+
+        # 创建一个数据库连接
+        con = pymysql.Connect(**db_config)
+
+        # 游标
+        cursor = con.cursor()
+
+        # 执行语句
+        cursor.execute(query_sql)
+
+        # 获取结果  打印结果
+        if state == 1:
+            res = cursor.fetchone()
+        else:
+            res = cursor.fetchall()
+
+        # 关闭游标
+        cursor.close()
+
+        # 关闭连接
+        con.close()
+
+        return res
+
+
+if __name__ == '__main__':
+    query_sql = 'select max(id) from loan where memberid={0}'.format(memberId)
+    print(DoMysql().getLoanId('23765'))

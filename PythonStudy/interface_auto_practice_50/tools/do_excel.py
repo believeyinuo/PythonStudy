@@ -28,12 +28,14 @@ class DoExcel:
             headers.append(sheet.cell(1, i).value)
         return headers
 
-    @classmethod
-    def do_excel(cls):
-        wb = load_workbook(cls.file_name)
+    # @classmethod
+    def do_excel(self):
+        wb = load_workbook(self.file_name)
         mode = eval(ReadConfig.get_config(project_path.case_config_path, 'MODE', 'mode'))
 
         tel = getattr(GetData, 'NoRegTel')  # 假设是从Excel里面拿到的手机号
+
+        # 利用python查询数据库的方式，去拿到最大的手机号-这里可以加 也可以放到get_data
 
         headers = cls.get_headers()
         result = []
@@ -44,16 +46,16 @@ class DoExcel:
                 for i in range(2, sheet.max_row + 1):
                     data = {}
                     data["case_id"] = sheet.cell(i, 1).value
-                    data["title"] = sheet.cell(i, 3).value
-                    data["url"] = sheet.cell(i, 4).value
+                    data["url"] = sheet.cell(i, 2).value
                     # data["data"] = sheet.cell(i, 5).value
-                    if sheet.cell(i,5).vaule.find('${tel_1}') != -1:
-                        data["data"] = sheet.cell(i, 5).value.replace('${tel_1}', str(tel))
-                    elif sheet.cell(i,5).vaule.find('${tel}') != -1:
-                        data["data"] = sheet.cell(i, 5).value.replace('${tel}', str(tel+1))
+                    if sheet.cell(i,3).vaule.find('${tel_1}') != -1:
+                        data["data"] = sheet.cell(i, 3).value.replace('${tel_1}', str(tel))
+                    elif sheet.cell(i,3).vaule.find('${tel}') != -1:
+                        data["data"] = sheet.cell(i, 3).value.replace('${tel}', str(tel+1))
                     else:
-                        data["data"] = sheet.cell(i, 5).value
-                    data["method"] = sheet.cell(i, 6).value
+                        data["data"] = sheet.cell(i, 3).value
+                    data["description"] = sheet.cell(i, 4).value
+                    data["method"] = sheet.cell(i, 5).value
                     data["expected"] = sheet.cell(i, 6).value
                     data["sheet_name"] = key
                     # for j in range(1, sheet.max_column + 1):
@@ -64,16 +66,16 @@ class DoExcel:
                 for case_id in mode[key]:
                     data = {}
                     data["case_id"] = sheet.cell(case_id + 1, 1).value
-                    data["title"] = sheet.cell(case_id + 1, 3).value
-                    data["url"] = sheet.cell(case_id + 1, 4).value
+                    data["url"] = sheet.cell(case_id + 1, 2).value
                     # data["data"] = sheet.cell(case_id + 1, 5).value
-                    if sheet.cell(i,5).vaule.find('${tel_1}') != -1:
-                        data["data"] = sheet.cell(i, 5).value.replace('${tel_1}', str(tel))
-                    elif sheet.cell(i,5).vaule.find('${tel}') != -1:
-                        data["data"] = sheet.cell(i, 5).value.replace('${tel}', str(tel+1))
+                    if sheet.cell(case_id + 1, 3).vaule.find('${tel_1}') != -1:
+                        data["data"] = sheet.cell(case_id + 1, 3).value.replace('${tel_1}', str(tel))
+                    elif sheet.cell(case_id + 1, 3).vaule.find('${tel}') != -1:
+                        data["data"] = sheet.cell(case_id + 1, 3).value.replace('${tel}', str(tel+1))
                     else:
-                        data["data"] = sheet.cell(i, 5).value
-                    data["method"] = sheet.cell(case_id + 1, 6).value
+                        data["data"] = sheet.cell(case_id + 1, 3).value
+                    data["description"] = sheet.cell(case_id + 1, 4).value
+                    data["method"] = sheet.cell(case_id + 1, 5).value
                     data["expected"] = sheet.cell(case_id + 1, 6).value
                     data["sheet_name"] = key
                     # for j in range(1, sheet.max_column + 1):
@@ -87,8 +89,8 @@ class DoExcel:
     def write_back(file_name, sheet_name, i, result, TestResult):
         wb = load_workbook(file_name)
         sheet = wb[sheet_name]
-        sheet.cell(i, 8).value = result
-        sheet.cell(i, 9).value = TestResult
+        sheet.cell(i, 7).value = result
+        sheet.cell(i, 8).value = TestResult
         wb.save(file_name)
 
     def update_tel(self, tel, filename, sheetname):

@@ -16,6 +16,6 @@ test_case_path = os.path.join(project_path,"test_data", "interface_auto_practice
 # 测试报告的路径
 test_report_path = os.path.join(project_path, "test_result", 'html_report', 'test_report.html')
 
-#配置文件的路径
+# 配置文件的路径
 case_config_path = os.path.join(project_path, "config", "case.config")
 print(case_config_path)
