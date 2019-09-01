@@ -3,7 +3,7 @@
 # @Author：lqc
 # @Email:572948875@qq.com
 # File : run.py
-
+# 执行文件
 
 from PythonStudy.interface_auto_practice_50.tools.unit_test_http_request import TestHttpRequest
 # from PythonStudy.interface_auto_practice_50.tools.do_excel import DoExcel
@@ -24,6 +24,7 @@ suite = unittest.TestSuite()
 #     suite.addTest(res)
 
 loader = unittest.TestLoader()
+# suite.addTest(TestHttpRequest('test_api'))
 # suite.addTest(loader.loadTestsFromModule(unit_test_http_request))
 suite.addTest(loader.loadTestsFromTestCase(TestHttpRequest))
 
@@ -39,12 +40,13 @@ with open(test_report_path, 'wb') as file:
 #
 # COOKIE = None
 #
-# # test_data = [{"url": "http://119.23.241.154:8080/fututeloan/mvc/api/member/login",
+# # test_data = [{"url": "http://119.23.241.154:8080/futureloan/mvc/api/member/login",
 # #               "data": {"mobilephone": "15096098888", "pwd": "123456"},
-# #               "title": "正常登陆", "http_method": "get"},
-# #              {"url": "http://119.23.241.154:8080/fututeloan/mvc/api/member/login",
+# #               "description": "正常登录", "http_method": "get"},
+# #              {"url": "http://119.23.241.154:8080/futureloan/mvc/api/member/login",
 # #               "data": {"mobilephone": "15096098888", "pwd": "123456789"},
-# #               "title": "输入错误的密码登陆", "http_method": "get"}]
+# #               "description": "输入错误的密码登录", "http_method": "get"}]
+
 # test_data = DoExcel("/Users/szdl/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/test_data/interface_auto_practice.xlsx", "login").do_excel()
 #
 #

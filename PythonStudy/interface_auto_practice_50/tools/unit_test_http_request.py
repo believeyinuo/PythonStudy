@@ -14,7 +14,7 @@ from PythonStudy.interface_auto_practice_50.tools.project_path import *
 from PythonStudy.interface_auto_practice_50.tools.do_logging import MyLog
 from PythonStudy.interface_auto_practice_50.tools.do_mysql import DoMysql
 
-test_data = DoExcel(test_case_path, "login").do_excel()
+test_data = DoExcel(test_case_path).do_excel()
 
 
 @ddt
@@ -27,7 +27,7 @@ class TestHttpRequest(unittest.TestCase):
     #     self.cookies = cookies
 
     @data(*test_data)
-    def test_http_request(self, item):
+    def test_api(self, item):
         # 请求之前完成loan_id的替换
         MyLog().info("开始执行用例{0}:{1}".format(item['case_id'], item['title']))
         if item['data'].find('${loan_id}') != -1:
@@ -47,11 +47,10 @@ class TestHttpRequest(unittest.TestCase):
             self.assertEqual(str(item["expected"]), res.json()['code'])
             TestResult = 'PASS'
         except AssertionError as e:
-            MyLog().info("断言错误{0}".format(e))
+            MyLog().info("执行用例出错：{0}".format(e))
             TestResult = 'Failed'
             raise e
         finally:
             DoExcel.write_back(test_case_path, item["sheet_name"], item["case_id"] + 1, res.text, TestResult)
             MyLog().error("获取到的结果是：{0}".format(res.json()))
-
         return res

@@ -13,8 +13,9 @@ print(df.ix[1].values)  # 读指定行  列表
 print(df.ix[1, 1])      # 第一行第一列
 print(df.ix[:])  # 读所有的
 print(df.ix[:].values)  # 读所有的
-print(df.ix[:["url"]].values) # 指定的列
+print(df.ix[:, ["url"]].values) # 指定的列
 print(df.ix[1, ["url", "data"]].to_dict()) # 指定的列
+print(df.ix[1,].to_dict()) # 指定的列
 print(df.index.values)
 test_data = []
 for i in df.index.values:

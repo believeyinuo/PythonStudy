@@ -57,9 +57,16 @@ if __name__ == "__main__":
 # # print("请求头:", recharge_res.request.headers)
 # # print("响应头:", recharge_res.headers)
 
-# 拓展
+# cookie:会员卡，所有请求出自同一个客户端，同一个用户发起的请求
+# session:保证会话的有效性，有效期间内进行的请求
+# token:鉴权  防止非法访问，请求从哪个页面过来，请求不是非法的，是否来自合法的页面
+# key:授权  拿到秘钥，才有权限访问页面、接口
+
+# 拓展  get请求必须要指明params
 # s = requests.session()  # 创建了一个会话
-#
+#  #  login_res = s.get(login_url, login_data)
+# 会报错，参数多了
 # login_res = s.get(login_url, params = login_data)
-# recharge_res = s.post(recharge_url, recharge_data)
+# recharge_res = s.post(recharge_url, recharge_data, cookies = login_res.cookies)
+# recharge_res = s.post(recharge_url, recharge_data)  # 不传cookie也可以成功
 # print("充值的结果是", recharge_res.json())

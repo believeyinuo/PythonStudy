@@ -8,7 +8,7 @@
 import logging
 
 # logger  收集日志
-# handler 输出日志  指定的文件还是控制台 默认到控制到
+# handler 输出日志  指定的文件还是控制台 默认到控制台
 
 # logging.debug("debug")
 # logging.info("info")
