@@ -7,7 +7,7 @@
 
 import unittest
 from PythonStudy.interface_auto_practice_50.tools.http_request import HttpRequest
-from PythonStudy.interface_auto_practice_50.tools.do_excel import DoExcel
+from PythonStudy.interface_auto_practice_50.tools.do_excel_old import DoExcel
 from PythonStudy.interface_auto_practice_50.tools.get_data import GetData
 from ddt import ddt, data  # 列表嵌套列表，列表嵌套字典
 from PythonStudy.interface_auto_practice_50.tools.project_path import *

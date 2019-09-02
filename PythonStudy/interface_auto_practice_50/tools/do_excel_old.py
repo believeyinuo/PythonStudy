@@ -8,7 +8,7 @@ from openpyxl import load_workbook
 from PythonStudy.interface_auto_practice_50.tools.read_config import ReadConfig
 from PythonStudy.interface_auto_practice_50.tools import project_path
 from PythonStudy.interface_auto_practice_50.tools.get_data import GetData
-from PythonStudy.interface_auto_practice_50.tools.do_regx import DoRegx
+
 
 # 相对路径 绝对路径
 # wb = load_workbook(r"/Users/LiQingChun/Desktop/PythonStudy/PythonStudy/interface_auto_practice_50/test_data/interface_auto_practice.xlsx")
@@ -32,7 +32,7 @@ class DoExcel:
         wb = load_workbook(self.file_name)
         mode = eval(ReadConfig.get_config(project_path.case_config_path, 'MODE', 'mode'))
 
-        NoRegTel = getattr(GetData, 'NoRegTel')  # 假设是从Excel里面拿到的手机号
+        tel = getattr(GetData, 'NoRegTel')  # 假设是从Excel里面拿到的手机号
 
         # 利用python查询数据库的方式，去拿到最大的手机号-这里可以加 也可以放到get_data
 
@@ -47,18 +47,24 @@ class DoExcel:
                     row_data["case_id"] = sheet.cell(i, 1).value
                     row_data["url"] = sheet.cell(i, 2).value
                     # data["data"] = sheet.cell(i, 5).value
-                    if sheet.cell(i,3).vaule.find('${NoRegTel}') != -1:
-                        row_data["data"] = sheet.cell(i, 3).value.replace('${NoRegTel}', str(tel))
+                    if sheet.cell(i,3).vaule.find('${normal_tel}') != -1:
+                        row_data["data"] = sheet.cell(i, 3).value.replace('${normal_tel}', str(tel))
                         tel = tel + 1
+                    elif sheet.cell(i ,3).value.find("${admin_tel}") != -1:
+                        row_data["data"] = sheet.cell(i, 3).value.replace('${admin_tel}', str(setattr(GetData, 'admin_tel')))
+                    elif sheet.cell(i ,3).value.find("${loan_member_id}") != -1:
+                        row_data["data"] = sheet.cell(i, 3).value.replace('${loan_member_id}', str(setattr(GetData, 'loan_member_id')))
+                    elif sheet.cell(i ,3).value.find("${normal_tel}") != -1:
+                        row_data["data"] = sheet.cell(i, 3).value.replace('${loan_member_id}', str(setattr(GetData, 'normal_tel')))
+                    elif sheet.cell(i ,3).value.find("${member_id}") != -1:
+                        row_data["data"] = sheet.cell(i, 3).value.replace('${loan_member_id}', str(setattr(GetData, 'member_id')))
                     else:
-                        if sheet.cell(i, 4).value != None:
-                            row_data["data"] = DoRegx.do_regx(sheet.cell(i, 3).value)
-                        else:
-                            row_data["data"] = None
+                        row_data["data"] = sheet.cell(i, 3).value
                     if sheet.cell(i, 4).value != None:
-                        row_data["check_sql"] = DoRegx.do_regx(sheet.cell(i, 3).value)
-                    else:
-                        row_data["check_sql"] = None
+                        if sheet.cell(i, 4).value.find("${normal_tel}") != -1:
+                            row_data["check_sql"] = sheet.cell(i, 4).value.replace("${normal_tel}", getattr(GetData, "normal_tel"))
+                        else:
+                            row_data["check_sql"] = sheet.cell(i, 4).value
                     row_data["description"] = sheet.cell(i, 5).value
                     row_data["method"] = sheet.cell(i, 6).value
                     row_data["expected"] = sheet.cell(i, 7).value
@@ -73,15 +79,24 @@ class DoExcel:
                     row_data["case_id"] = sheet.cell(case_id + 1, 1).value
                     row_data["url"] = sheet.cell(case_id + 1, 2).value
                     # data["data"] = sheet.cell(case_id + 1, 5).value
-                    if sheet.cell(case_id + 1, 3).vaule.find('${NoRegTel}') != -1:
-                        row_data["data"] = sheet.cell(case_id + 1, 3).value.replace('${NoRegTel}', str(tel))
+                    if sheet.cell(case_id + 1, 3).vaule.find('${normal_tel}') != -1:
+                        row_data["data"] = sheet.cell(case_id + 1, 3).value.replace('${normal_tel}', str(tel))
                         tel = tel + 1
+                    elif sheet.cell(case_id + 1, 3).value.find("${admin_tel}") != -1:
+                        row_data["data"] = sheet.cell(case_id + 1, 3).value.replace('${admin_tel}', str(setattr(GetData, 'admin_tel')))
+                    elif sheet.cell(case_id + 1, 3).value.find("${loan_member_id}") != -1:
+                        row_data["data"] = sheet.cell(case_id + 1, 3).value.replace('${loan_member_id}', str(setattr(GetData, 'loan_member_id')))
+                    elif sheet.cell(case_id + 1, 3).value.find("${normal_tel}") != -1:
+                        row_data["data"] = sheet.cell(case_id + 1, 3).value.replace('${loan_member_id}', str(setattr(GetData, 'normal_tel')))
+                    elif sheet.cell(case_id + 1, 3).value.find("${member_id}") != -1:
+                        row_data["data"] = sheet.cell(case_id + 1, 3).value.replace('${loan_member_id}', str(setattr(GetData, 'member_id')))
                     else:
-                        row_data["data"] = DoRegx.do_regx(sheet.cell(case_id + 1, 3).value)
+                        row_data["data"] = sheet.cell(case_id + 1, 3).value
                     if sheet.cell(case_id + 1, 4).value != None:
-                        row_data["check_sql"] = DoRegx.do_regx(sheet.cell(case_id+1, 3).value)
-                    else:
-                        row_data["check_sql"] = None
+                        if sheet.cell(case_id + 1, 4).value.find("${normal_tel}") != -1:
+                            row_data["check_sql"] = sheet.cell(case_id + 1, 4).value.replace("${normal_tel}", getattr(GetData, "normal_tel"))
+                        else:
+                            row_data["check_sql"] = sheet.cell(case_id + 1, 4).value
                     row_data["description"] = sheet.cell(case_id + 1, 5).value
                     row_data["method"] = sheet.cell(case_id + 1, 6).value
                     row_data["expected"] = sheet.cell(case_id + 1, 7).value

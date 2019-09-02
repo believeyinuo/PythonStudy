@@ -18,6 +18,7 @@ class GetData:
     admin_tel = pd.read_excel(project_path.test_case_path, sheet_name='init').ix[2, 0]
     loan_member_id = pd.read_excel(project_path.test_case_path, sheet_name='init').ix[3, 0]
     member_id = pd.read_excel(project_path.test_case_path, sheet_name='init').ix[4, 0]
+    pwd = '123456'
 
 # setattr(GetCookie, "Cookie", "123456")  # set attribute 设置属性值
 # hasattr(GetCookie, "Cookie")  # has attribute 判断是否有这个属性值

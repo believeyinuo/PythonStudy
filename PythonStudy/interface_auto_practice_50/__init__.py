@@ -128,7 +128,8 @@
 #    安装之前会看到下面的输入密码的界面
 #    你会看到这个界面，告诉你要进行输入密码，利用命令 cat /root/.jenkins/secrets/initialAdminPassword获取到密码，填入，点击下一步即可
 
-
+# 学习目标：
+# 1、安装Jenkins&Jenkins
 
 
 
