@@ -43,5 +43,6 @@ class DoMysql:
 
 
 if __name__ == '__main__':
-    query_sql = 'select max(id) from loan where memberid={0}'.format(memberId)
-    print(DoMysql().getLoanId('23765'))
+    from PythonStudy.interface_auto_practice_50.tools import get_data
+    query_sql = 'select max(id) from loan where MemberID = {0}'.format(getattr(GetData, 'loan_member_id'))
+    print(DoMysql().do_mysql(query_sql, 1))

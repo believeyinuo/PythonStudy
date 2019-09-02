@@ -6,16 +6,18 @@
 
 from PythonStudy.interface_auto_practice_50.tools import project_path
 import pandas as pd
+from PythonStudy.interface_auto_practice_50.tools.read_config import ReadConfig
 
 
 class GetData:
     Cookie = None
     loan_id = None
+    check_list = eval(ReadConfig.get_config(project_path.case_config_path, 'CHECKLEAVEAMOUNT', 'check_list'))
     NoRegTel = pd.read_excel(project_path.test_case_path, sheet_name='init').ix[0, 0]
-    # normal_tel = pd.read_excel(project_path.test_case_path, sheet_name='init').ix[1, 0]
-    # admin_tel = pd.read_excel(project_path.test_case_path, sheet_name='init').ix[2, 0]
-    # loan_member_id = pd.read_excel(project_path.test_case_path, sheet_name='init').ix[3, 0]
-    # member_id = pd.read_excel(project_path.test_case_path, sheet_name='init').ix[4, 0]
+    normal_tel = pd.read_excel(project_path.test_case_path, sheet_name='init').ix[1, 0]
+    admin_tel = pd.read_excel(project_path.test_case_path, sheet_name='init').ix[2, 0]
+    loan_member_id = pd.read_excel(project_path.test_case_path, sheet_name='init').ix[3, 0]
+    member_id = pd.read_excel(project_path.test_case_path, sheet_name='init').ix[4, 0]
 
 # setattr(GetCookie, "Cookie", "123456")  # set attribute 设置属性值
 # hasattr(GetCookie, "Cookie")  # has attribute 判断是否有这个属性值

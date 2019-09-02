@@ -47,15 +47,27 @@ class DoExcel:
                     row_data["case_id"] = sheet.cell(i, 1).value
                     row_data["url"] = sheet.cell(i, 2).value
                     # data["data"] = sheet.cell(i, 5).value
-                    if sheet.cell(i,3).vaule.find('${tel_1}') != -1:
-                        row_data["data"] = sheet.cell(i, 3).value.replace('${tel_1}', str(tel))
-                    elif sheet.cell(i,3).vaule.find('${tel}') != -1:
-                        row_data["data"] = sheet.cell(i, 3).value.replace('${tel}', str(tel+1))
+                    if sheet.cell(i,3).vaule.find('${normal_tel}') != -1:
+                        row_data["data"] = sheet.cell(i, 3).value.replace('${normal_tel}', str(tel))
+                        tel = tel + 1
+                    elif sheet.cell(i ,3).value.find("${admin_tel}") != -1:
+                        row_data["data"] = sheet.cell(i, 3).value.replace('${admin_tel}', str(setattr(GetData, 'admin_tel')))
+                    elif sheet.cell(i ,3).value.find("${loan_member_id}") != -1:
+                        row_data["data"] = sheet.cell(i, 3).value.replace('${loan_member_id}', str(setattr(GetData, 'loan_member_id')))
+                    elif sheet.cell(i ,3).value.find("${normal_tel}") != -1:
+                        row_data["data"] = sheet.cell(i, 3).value.replace('${loan_member_id}', str(setattr(GetData, 'normal_tel')))
+                    elif sheet.cell(i ,3).value.find("${member_id}") != -1:
+                        row_data["data"] = sheet.cell(i, 3).value.replace('${loan_member_id}', str(setattr(GetData, 'member_id')))
                     else:
                         row_data["data"] = sheet.cell(i, 3).value
-                    row_data["description"] = sheet.cell(i, 4).value
-                    row_data["method"] = sheet.cell(i, 5).value
-                    row_data["expected"] = sheet.cell(i, 6).value
+                    if sheet.cell(i, 4).value != None:
+                        if sheet.cell(i, 4).value.find("${normal_tel}") != -1:
+                            row_data["check_sql"] = sheet.cell(i, 4).value.replace("${normal_tel}", getattr(GetData, "normal_tel"))
+                        else:
+                            row_data["check_sql"] = sheet.cell(i, 4).value
+                    row_data["description"] = sheet.cell(i, 5).value
+                    row_data["method"] = sheet.cell(i, 6).value
+                    row_data["expected"] = sheet.cell(i, 7).value
                     row_data["sheet_name"] = key
                     # for j in range(1, sheet.max_column + 1):
                     #     data[headers[j - 1]] = sheet.cell(i, j).value
@@ -67,15 +79,27 @@ class DoExcel:
                     row_data["case_id"] = sheet.cell(case_id + 1, 1).value
                     row_data["url"] = sheet.cell(case_id + 1, 2).value
                     # data["data"] = sheet.cell(case_id + 1, 5).value
-                    if sheet.cell(case_id + 1, 3).vaule.find('${tel_1}') != -1:
-                        row_data["data"] = sheet.cell(case_id + 1, 3).value.replace('${tel_1}', str(tel))
-                    elif sheet.cell(case_id + 1, 3).vaule.find('${tel}') != -1:
-                        row_data["data"] = sheet.cell(case_id + 1, 3).value.replace('${tel}', str(tel+1))
+                    if sheet.cell(case_id + 1, 3).vaule.find('${normal_tel}') != -1:
+                        row_data["data"] = sheet.cell(case_id + 1, 3).value.replace('${normal_tel}', str(tel))
+                        tel = tel + 1
+                    elif sheet.cell(case_id + 1, 3).value.find("${admin_tel}") != -1:
+                        row_data["data"] = sheet.cell(case_id + 1, 3).value.replace('${admin_tel}', str(setattr(GetData, 'admin_tel')))
+                    elif sheet.cell(case_id + 1, 3).value.find("${loan_member_id}") != -1:
+                        row_data["data"] = sheet.cell(case_id + 1, 3).value.replace('${loan_member_id}', str(setattr(GetData, 'loan_member_id')))
+                    elif sheet.cell(case_id + 1, 3).value.find("${normal_tel}") != -1:
+                        row_data["data"] = sheet.cell(case_id + 1, 3).value.replace('${loan_member_id}', str(setattr(GetData, 'normal_tel')))
+                    elif sheet.cell(case_id + 1, 3).value.find("${member_id}") != -1:
+                        row_data["data"] = sheet.cell(case_id + 1, 3).value.replace('${loan_member_id}', str(setattr(GetData, 'member_id')))
                     else:
                         row_data["data"] = sheet.cell(case_id + 1, 3).value
-                    row_data["description"] = sheet.cell(case_id + 1, 4).value
-                    row_data["method"] = sheet.cell(case_id + 1, 5).value
-                    row_data["expected"] = sheet.cell(case_id + 1, 6).value
+                    if sheet.cell(case_id + 1, 4).value != None:
+                        if sheet.cell(case_id + 1, 4).value.find("${normal_tel}") != -1:
+                            row_data["check_sql"] = sheet.cell(case_id + 1, 4).value.replace("${normal_tel}", getattr(GetData, "normal_tel"))
+                        else:
+                            row_data["check_sql"] = sheet.cell(case_id + 1, 4).value
+                    row_data["description"] = sheet.cell(case_id + 1, 5).value
+                    row_data["method"] = sheet.cell(case_id + 1, 6).value
+                    row_data["expected"] = sheet.cell(case_id + 1, 7).value
                     row_data["sheet_name"] = key
                     # for j in range(1, sheet.max_column + 1):
                     #     data[headers[j - 1]] = sheet.cell(i, j).value
@@ -85,11 +109,10 @@ class DoExcel:
         return result
 
     @staticmethod
-    def write_back(file_name, sheet_name, i, result, TestResult):
+    def write_back(file_name, sheet_name, row , col, result):
         wb = load_workbook(file_name)
         sheet = wb[sheet_name]
-        sheet.cell(i, 7).value = result
-        sheet.cell(i, 8).value = TestResult
+        sheet.cell(row, col).value = result
         wb.save(file_name)  # 保存结果
 
     def update_tel(self, tel, filename, sheetname):

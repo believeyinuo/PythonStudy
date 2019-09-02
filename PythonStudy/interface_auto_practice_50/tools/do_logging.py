@@ -6,6 +6,7 @@
 # @Project : PythonStudy
 
 import logging
+from PythonStudy.interface_auto_practice_50.tools import project_path
 
 
 class MyLog:
@@ -23,7 +24,7 @@ class MyLog:
         ch.setLevel('DEBUG')
         ch.setFormatter(formater)
 
-        fh = logging.FileHandler('learn_logging.txt', encoding='utf-8')
+        fh = logging.FileHandler(project_path.log_path, encoding='utf-8')
         fh.setLevel('DEBUG')
         fh.setFormatter(formater)
 
