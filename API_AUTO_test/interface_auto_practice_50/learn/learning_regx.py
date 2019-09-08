@@ -23,7 +23,7 @@ import re
 # res = re.findall('(le)(mon)', s)  # 列表 在字符串里面找匹配的内容
 # # 如果有分组 就是一元组的形式表现出来，列表嵌套元组
 # print(res)
-from PythonStudy.interface_auto_practice_50.tools.get_data import GetData
+from API_AUTO_test.interface_auto_practice_50.tools.get_data import GetData
 s = '{"mobilephone":"${normal_tel}", "pwd":"${pwd}"}'
 while re.search('\$\{(.*?)\}', s):
     key = re.search('\$\{(.*?)\}', s).group(0)

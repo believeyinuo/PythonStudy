@@ -5,14 +5,10 @@
 # File : do_excel_old.py
 
 from openpyxl import load_workbook
-from PythonStudy.interface_auto_practice_50.tools.read_config import ReadConfig
-from PythonStudy.interface_auto_practice_50.tools import project_path
-from PythonStudy.interface_auto_practice_50.tools.get_data import GetData
-from PythonStudy.interface_auto_practice_50.tools.do_regx import DoRegx
-
-# 相对路径 绝对路径
-# wb = load_workbook(r"/Users/LiQingChun/Desktop/API_AUTO_test/API_AUTO_test/interface_auto_practice_50/test_data/interface_auto_practice.xlsx")
-# wb1 = load_workbook("../test_data/interface_auto_practice.xlsx")
+from API_AUTO_test.interface_auto_practice_50.tools.read_config import ReadConfig
+from API_AUTO_test.interface_auto_practice_50.tools import project_path
+from API_AUTO_test.interface_auto_practice_50.tools.get_data import GetData
+from API_AUTO_test.interface_auto_practice_50.tools.do_regx import DoRegx
 
 
 class DoExcel:
@@ -48,13 +44,11 @@ class DoExcel:
                     row_data["url"] = sheet.cell(i, 2).value
                     # data["data"] = sheet.cell(i, 5).value
                     if sheet.cell(i,3).vaule.find('${NoRegTel}') != -1:
-                        row_data["data"] = sheet.cell(i, 3).value.replace('${NoRegTel}', str(tel))
-                        tel = tel + 1
+                        row_data["data"] = sheet.cell(i, 3).value.replace('${NoRegTel}', str(NoRegTel))
+                        NoRegTel = NoRegTel + 1
                     else:
-                        if sheet.cell(i, 4).value != None:
-                            row_data["data"] = DoRegx.do_regx(sheet.cell(i, 3).value)
-                        else:
-                            row_data["data"] = None
+                        row_data["data"] = DoRegx.do_regx(sheet.cell(i, 3).value)
+                    # 因为Excel里面有的时候会没有任何数据，所以要先做判断决定是否要用正则处理数据，如果是None，正则无法处理，另行写代码做处理
                     if sheet.cell(i, 4).value != None:
                         row_data["check_sql"] = DoRegx.do_regx(sheet.cell(i, 3).value)
                     else:
@@ -66,7 +60,7 @@ class DoExcel:
                     # for j in range(1, sheet.max_column + 1):
                     #     data[headers[j - 1]] = sheet.cell(i, j).value
                     result.append(row_data)
-                    self.update_tel(tel + 2, self.file_name, 'init')
+                    self.update_tel(NoRegTel + 2, self.file_name, 'init')
             else:
                 for case_id in mode[key]:
                     row_data = {}
@@ -74,8 +68,8 @@ class DoExcel:
                     row_data["url"] = sheet.cell(case_id + 1, 2).value
                     # data["data"] = sheet.cell(case_id + 1, 5).value
                     if sheet.cell(case_id + 1, 3).vaule.find('${NoRegTel}') != -1:
-                        row_data["data"] = sheet.cell(case_id + 1, 3).value.replace('${NoRegTel}', str(tel))
-                        tel = tel + 1
+                        row_data["data"] = sheet.cell(case_id + 1, 3).value.replace('${NoRegTel}', str(NoRegTel))
+                        NoRegTel = NoRegTel + 1
                     else:
                         row_data["data"] = DoRegx.do_regx(sheet.cell(case_id + 1, 3).value)
                     if sheet.cell(case_id + 1, 4).value != None:
@@ -89,7 +83,7 @@ class DoExcel:
                     # for j in range(1, sheet.max_column + 1):
                     #     data[headers[j - 1]] = sheet.cell(i, j).value
                     result.append(row_data)
-                    self.update_tel(tel + 2, self.file_name, 'init')
+                    self.update_tel(NoRegTel + 2, self.file_name, 'init')
 
         return result
 

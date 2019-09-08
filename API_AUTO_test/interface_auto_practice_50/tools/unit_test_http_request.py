@@ -6,13 +6,13 @@
 # @Project : API_AUTO_test
 
 import unittest
-from PythonStudy.interface_auto_practice_50.tools.http_request import HttpRequest
-from PythonStudy.interface_auto_practice_50.tools.do_excel_old import DoExcel
-from PythonStudy.interface_auto_practice_50.tools.get_data import GetData
+from API_AUTO_test.interface_auto_practice_50.tools.http_request import HttpRequest
+from API_AUTO_test.interface_auto_practice_50.tools.do_excel_old import DoExcel
+from API_AUTO_test.interface_auto_practice_50.tools.get_data import GetData
 from ddt import ddt, data  # 列表嵌套列表，列表嵌套字典
-from PythonStudy.interface_auto_practice_50.tools.project_path import *
-from PythonStudy.interface_auto_practice_50.tools.do_logging import MyLog
-from PythonStudy.interface_auto_practice_50.tools.do_mysql import DoMysql
+from API_AUTO_test.interface_auto_practice_50.tools.project_path import *
+from API_AUTO_test.interface_auto_practice_50.tools.do_logging import MyLog
+from API_AUTO_test.interface_auto_practice_50.tools.do_mysql import DoMysql
 
 test_data = DoExcel(test_case_path).do_excel()
 
@@ -59,14 +59,14 @@ class TestHttpRequest(unittest.TestCase):
                 MyLog.info("数据库余额校验通过")
                 check_sql_result = '数据库检查通过'
             else:
-                MyLog.info("数据库余额校验通过")
-                check_sql_result = '数据库检查通过'
+                MyLog.info("数据库余额校验未通过")
+                check_sql_result = '数据库检查未通过'
             DoExcel().write_back(test_case_path, item["sheet_name"], item["case_id"] + 1, 10, check_sql_result)
         else:
+            MyLog().info("此条用例不需要做数据库校验:{0}".format(item["title"]))
+            MyLog().info("---------------开始http接口请求------------------")
             res = HttpRequest().http_request(item["url"], eval(item["data"]), item["method"], getattr(GetData, "Cookie"))
-
             MyLog().info("---------------完成http接口请求------------------")
-
 
         if res.cookies:
             setattr(GetData, "Cookie", res.cookies)

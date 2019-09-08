@@ -5,9 +5,9 @@
 # File : do_excel_old.py
 
 from openpyxl import load_workbook
-from PythonStudy.interface_auto_practice_50.tools.read_config import ReadConfig
-from PythonStudy.interface_auto_practice_50.tools import project_path
-from PythonStudy.interface_auto_practice_50.tools.get_data import GetData
+from API_AUTO_test.interface_auto_practice_50.tools.read_config import ReadConfig
+from API_AUTO_test.interface_auto_practice_50.tools import project_path
+from API_AUTO_test.interface_auto_practice_50.tools.get_data import GetData
 
 
 # 相对路径 绝对路径

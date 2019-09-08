@@ -17,5 +17,5 @@ class ReadConfig:
         return cf[section][option]
 
 if __name__ == "__main__":
-    from PythonStudy.interface_auto_practice_50.tools import project_path
+    from API_AUTO_test.interface_auto_practice_50.tools import project_path
     print(ReadConfig.get_config(project_path.case_config_path, 'MODE', 'mode'))

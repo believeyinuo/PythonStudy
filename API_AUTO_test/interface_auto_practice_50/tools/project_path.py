@@ -20,6 +20,6 @@ test_report_path = os.path.join(project_path, "test_result", 'html_report', 'tes
 case_config_path = os.path.join(project_path, "config", "case.config")
 
 # 存储日志的文件路径
-log_path = os.path.join(project_path, "test_result", "test_api.txt")
+log_path = os.path.join(project_path, "test_result", "log", "test_api.txt")
 
 print(case_config_path)

@@ -6,8 +6,8 @@
 # @Project : API_AUTO_test
 
 import pymysql
-from PythonStudy.interface_auto_practice_50.tools import project_path
-from PythonStudy.interface_auto_practice_50.tools.read_config import ReadConfig
+from API_AUTO_test.interface_auto_practice_50.tools import project_path
+from API_AUTO_test.interface_auto_practice_50.tools.read_config import ReadConfig
 
 
 class DoMysql:
@@ -43,6 +43,6 @@ class DoMysql:
 
 
 if __name__ == '__main__':
-    from PythonStudy.interface_auto_practice_50.tools import get_data
+    from API_AUTO_test.interface_auto_practice_50.tools import get_data
     query_sql = 'select max(id) from loan where MemberID = {0}'.format(getattr(GetData, 'loan_member_id'))
     print(DoMysql().do_mysql(query_sql, 1))

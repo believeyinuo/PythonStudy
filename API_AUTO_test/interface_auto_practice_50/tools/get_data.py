@@ -4,9 +4,9 @@
 # @Email:572948875@qq.com
 # File : get_data.py
 
-from PythonStudy.interface_auto_practice_50.tools import project_path
+from API_AUTO_test.interface_auto_practice_50.tools import project_path
 import pandas as pd
-from PythonStudy.interface_auto_practice_50.tools.read_config import ReadConfig
+from API_AUTO_test.interface_auto_practice_50.tools.read_config import ReadConfig
 
 
 class GetData:

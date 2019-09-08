@@ -5,7 +5,7 @@
 #File : http_request.py
 
 import requests
-from PythonStudy.interface_auto_practice_50.tools.do_logging import MyLog
+from API_AUTO_test.interface_auto_practice_50.tools.do_logging import MyLog
 
 
 class HttpRequest:

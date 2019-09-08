@@ -6,7 +6,7 @@
 # @Project : API_AUTO_test
 
 import logging
-from PythonStudy.interface_auto_practice_50.tools import project_path
+from API_AUTO_test.interface_auto_practice_50.tools import project_path
 
 
 class MyLog:

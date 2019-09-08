@@ -12,8 +12,10 @@ from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
 
 # 邮件发送的用户名和密码 常识：第三方授权
-_user = '1255811581@qq.com'
-_pwd = 'jhqoipesmaxhbafc77'
+# _user = '1255811581@qq.com'
+# _pwd = 'jhqoipesmaxhbafc77'
+_user = '572948875@qq.com'
+_pwd = 'gjgwsppdpegdbedb'
 
 now = time.strftime('%Y-%m-%d_%H_%M_%S')  # 获取时间戳
 
@@ -24,7 +26,7 @@ class sendEmail:
         # filepath 你要发送附件的地址
         # 如名字所示 Multipart就是分多个部分
         msg = MIMEMultipart()
-        msg['Subject'] = now + "华华的测试报告"
+        msg['Subject'] = now + "华华的测试报告"  # 邮件的主题
         msg["From"] = _user
         msg["To"] = email_to
 
@@ -40,3 +42,6 @@ class sendEmail:
         s.login(_user, _pwd)  # 登录服务器
         s.sendmail(_user, email_to, msg.as_string())  # 发送邮件
         s.close()
+
+if __name__ == '__main__':
+    sendEmail().send_email("believeyinuo@163.com", "/Users/LiQingChun/Desktop/PythonStudy/API_AUTO_test/interface_auto_practice_50/test_result/html_report/test_report.html")

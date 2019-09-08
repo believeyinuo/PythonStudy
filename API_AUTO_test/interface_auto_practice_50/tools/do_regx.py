@@ -1,11 +1,11 @@
 # -*- coding:utf-8 -*-
-#@Time : 2019-09-02 
-#@Author：lqc
-#@Email:572948875@qq.com
-#File : do_regx.py
+# @Time : 2019-09-02
+# @Author：lqc
+# @Email:572948875@qq.com
+# File : do_regx.py
 
 import re
-from PythonStudy.interface_auto_practice_50.tools.get_data import GetData
+from API_AUTO_test.interface_auto_practice_50.tools.get_data import GetData
 
 
 class DoRegx:
