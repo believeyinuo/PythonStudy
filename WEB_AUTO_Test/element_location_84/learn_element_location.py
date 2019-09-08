@@ -48,3 +48,12 @@ driver.find_elements_by_partial_link_text("更多产品")
 #       //*[@id="kw"]
 #       以//开头
 #       不依赖页面的的顺序和位置。只看整个页面当中有没有符合表达式的元素
+#       //标签名称[@属性名称=值]
+#       逻辑运算  and or //标签名称[@属性名称=值 and @属性名称=值]
+#       层级定位
+#       //*[@id="third-nav"]//a[text()="资料"]
+#       //a[text()="资料"]
+#       //input[contains(@class, "username")
+#       text()  文本定位
+#       contains(@属性名称/text(), 文本内容)  包含
+
