@@ -1,8 +1,8 @@
 # -*- coding:utf-8 -*-
-#@Time : 2019-09-05 
-#@Author：lqc
-#@Email:572948875@qq.com
-#File : learn_element_location.py
+# @Time : 2019-09-05
+# @Author：lqc
+# @Email:572948875@qq.com
+# File : learn_element_location.py
 
 # 元素定位
 # id、classname、tagname、name
