@@ -2,7 +2,7 @@
 # @Time : 2019-09-15 11:53
 # @Author：lqc
 # @Email:572948875@qq.com
-# File : test_invest.py
+# File : test_01_invest.py
 
 # 前置条件
 ######################尽量不要依赖测试环境数据，如果没有，就自己造环境#############
@@ -41,6 +41,7 @@ from WEB_AUTO_test.pageobject_95.PageObjects.bid_page import BidPage
 from WEB_AUTO_test.pageobject_95.PageObjects.user_page import UserPage
 from WEB_AUTO_test.pageobject_95.TestDatas import invest_datas as ID
 import time
+import pytest
 
 
 @ddt.ddt
@@ -71,6 +72,7 @@ class TestInvest(unittest.TestCase):
         self.driver.refresh()
         time.sleep(0.5)
 
+    @pytest.mark.smoke
     def test_invest_1_success(self):
         logging.info("**********投资用例：正常场景-投资成功******")
         # 步骤
