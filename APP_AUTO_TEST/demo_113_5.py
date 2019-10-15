@@ -5,6 +5,9 @@
 # File : demo_113_5.py
 
 from appium import webdriver
+
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from appium.webdriver.common.mobileby import MobileBy
 
 desired_caps = {}
@@ -27,10 +30,22 @@ driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_caps)
 # 2、模拟器/真机必须能够被电脑识别。即adb devices能够识别到要操作的设备。
 
 # id
-driver.find_element_by_id("com.lemon.lemonban:id/navigation_tiku")
-# class
-driver.find_element_by_class_name("android.widget.FrameLayout")
-# content-desc
-driver.find_element_by_accessibility_id("")
-# uiautomator
-driver.find_element_by_android_uiautomator()
+# driver.find_element_by_id("com.lemon.lemonban:id/navigation_tiku")
+# # class
+# driver.find_element_by_class_name("android.widget.FrameLayout")
+# # content-desc
+# driver.find_element_by_accessibility_id("")  # webElement
+# # uiautomator
+# driver.find_element_by_android_uiautomator('new UiSelector().text("柠檬社区")')
+
+WebDriverWait(driver, 20).until(EC.visibility_of_element_located((MobileBy.ID, 'com.lemon.lemonban:id/navigation_my')))
+driver.find_element_by_id('com.lemon.lemonban:id/navigation_my').click()
+#点击我的头像
+WebDriverWait(driver, 20).until(EC.visibility_of_element_located((MobileBy.ID, 'com.lemon.lemonban:id/fragment_my_lemon_avatar_layout')))
+driver.find_element_by_id('com.lemon.lemonban:id/fragment_my_lemon_avatar_layout').click()
+
+# 输入用户名、密码、电机的鞥路按钮
+WebDriverWait(driver, 20).until(EC.visibility_of_element_located((MobileBy.ID, 'com.lemon.lemonban:id/et_mobile')))
+driver.find_element_by_id('com.lemon.lemonban:id/et_mobile').send_keys("18684720553")
+driver.find_element_by_id('com.lemon.lemonban:id/et_password').send_keys("python")
+driver.find_element_by_id('com.lemon.lemonban:id/btn_login').click()
