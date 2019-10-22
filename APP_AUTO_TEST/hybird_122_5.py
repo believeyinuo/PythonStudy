@@ -17,7 +17,7 @@ desired_caps = {}
 # 平台类型
 desired_caps["platform"] = "Android"
 # 平台版本号
-desired_caps["platformVersion"] = "7.1"
+desired_caps["platformVersion"] = "8.0"
 # 设备名称
 desired_caps["deviceName"] = "Android Emulator"
 # app包名
@@ -51,4 +51,4 @@ driver.switch_to.context(cons[-1])
 # 3、切换之后："当前的操作对象:html页面"----uc-devtool工具识别html页面，定位元素
 # 等待元素可见
 WebDriverWait(driver, 20).until(EC.visibility_of_element_located((MobileBy.XPATH, "//button[@class='bottom-btn'")))
-driver.find_element_by_xpath("//button[@class='bottom-btn'").click()
+driver.find_element_by_xpath("//button[@class='bottom-btn buy'").click()
