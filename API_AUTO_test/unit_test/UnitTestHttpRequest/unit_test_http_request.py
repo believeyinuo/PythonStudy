@@ -17,7 +17,7 @@ suite = unittest.TestSuite()
 # 创建一个加载器
 loader = unittest.TestLoader()
 
-from PythonStudy.unit_test.UnitTestHttpRequest import test_http_request
+from API_AUTO_test.unit_test.UnitTestHttpRequest import test_http_request
 
 suite.addTest(loader.loadTestsFromModule(test_http_request))
 
