@@ -11,6 +11,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 from APP_AUTO_TEST.practice_126_5.Common import dir_config
+from appium.webdriver.common.mobileby import MobileBy
 
 """
 1、封装基本函数 - 执行日志、异常处理、失败截图
@@ -91,6 +92,100 @@ class BasePage:
     def input_text(self, locator, text, doc=""):
         # 找元素
         ele = self.get_element(locator, doc)
-        
+        # 输入操作
+        logging.info("{0}：元素：{1}输入内容：{2}".format(doc, locator, text))
+        try:
+            ele.send_keys(text)
+        except:
+            logging.exception("元素输入操作失败！！！")
+            # 截图
+            self.save_screenshot(doc)
+            raise
+
+    # 获取元素的文本内容
+    def get_text(self, locator, doc=""):
+        # 找元素
+        ele = self.get_element(locator, doc)
+        logging.info("{0}：获取元素：{1} 的文本内容".format(doc, locator))
+        try:
+            text = ele.text
+            logging.info("元素：{0} 的文本内容为：{1}".format(locator, text))
+            return text
+        except:
+            logging.exception("获取元素文本内容失败！！！")
+            # 截图
+            self.save_screenshot(doc)
+            raise
+
+    # 获取元素的属性
+    def get_element_attribute(self, locator, attr, doc=""):
+        # 找元素
+        ele = self.get_element(locator, doc)
+        logging.info("{0}：获取元素：{1}的属性：{2}".format(doc, locator, attr))
+        try:
+            ele_attr = ele.get_attribute(attr)
+            logging.info("元素：{0} 的属性{1} 的值为：{2}".format(locator, attr, ele_attr))
+            return ele_attr
+        except:
+            logging.exception("获取元素的属性失败！！！")
+            # 截图
+            self.save_screenshot(doc)
+
+    # 元素存在则为True，否则为False
+    def is_eleExist(self, locator, timeout=10, doc=""):
+        logging.info("在页面 {0} 中是否存在元素：{1}".format(doc, locator))
+        try:
+            WebDriverWait(self.driver, timeout).until(EC.presence_of_element_located(locator))
+            logging.info("{0} 秒内页面 {1} 中存在元素：{2}".format(timeout, doc, locator))
+            return True
+        except:
+            logging.info("{0} 秒内页面 {1} 中不存在元素：{2}".format(timeout, doc, locator))
+            return False
+
+    # 上下左右滑动
+    def swipe_up(self, size):
+        pass
+
+    def swipe_down(self, size):
+        pass
+
+    def swipe_left(self, size):
+        self.driver.swipe(size["width"] * 0.9, size["height"] * 0.5, size["width"] * 0.1, size["height"] * 0.5)
+        pass
+
+    def swipe_right(self, size):
+        pass
+
+    # 获取整个屏幕大小
+    def get_size(self):
+        return self.driver.get_windor_size()
+
+    # toast获取
+    def get_toastMsg(self, str):
+        # 1、xpath表达式  文本匹配
+        loc = '//*[contains(@text, "{}")]'.format(str)
+
+        # 等待的时候，要用元素存在的条件。不能用元素可见的条件
+        try:
+            WebDriverWait(self.driver, 10, 0.01).until(EC.presence_of_element_located(MobileBy.XPATH, loc))
+            return self.driver.find_element_by_xpath(loc).text
+        except:
+            logging.exception("没有找到匹配的toast!!!!")
+            raise
+
+    # h5切换
+
+    def save_screenshot(self, doc):
+        # 图片名称：模块名_页面名称_操作名称_年-月-日_时分秒.png
+        # filepath=指的图片保存目录/model(页面功能名称)_当前时间到秒.png
+        filePath = dir_config.screenshot_dir + \
+            "/{0}_{1}.png".format(doc, time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime()))
+        # 截图文件存放在Screenshot目录下
+        # driver方法：self.driver.save_screenshot()
+        try:
+            self.driver.save_screenshot(filePath)
+            logging.info("截屏成功。图片路径为{}0".format(filePath))
+        except:
+            logging.exception("截图失败")
 
 
