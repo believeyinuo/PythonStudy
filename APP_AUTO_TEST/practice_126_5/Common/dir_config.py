@@ -23,6 +23,8 @@ logs_dir = os.path.join(base_dir, "Outputs/Logs")
 
 screenshot_dir = os.path.join(base_dir, "Outputs/Screnshots")
 
+caps_dir = os.path.join(base_dir, "Desired_Caps")
+
 
 
 

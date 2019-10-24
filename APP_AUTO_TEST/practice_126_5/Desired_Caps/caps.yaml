@@ -1,0 +1,7 @@
+platformVersion: 7.1
+platformName: Android
+deviceName: Emulator
+appPackage: com.xxzb.fenwoo
+appActivity: com.xxzb.fenwoo.activity.addition.WelcomeActivity
+noReset: True
+automationName: UiAutomator2
