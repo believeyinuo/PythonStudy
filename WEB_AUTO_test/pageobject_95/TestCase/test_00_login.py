@@ -13,7 +13,7 @@ import pytest
 import logging
 
 
-@pytest.mark.usefixtures("access_web")  # 在运行的时候，回去运行axxess_web函数
+@pytest.mark.usefixtures("access_web")  # 在运行的时候，回去运行access_web函数
 @pytest.mark.usefixtures("refresh_page")
 class TestLogin:
 
@@ -38,9 +38,10 @@ class TestLogin:
     #     # 后置
     #     self.driver.refresh()
 
-    # 正常用例-登录成功 fixture的函数名称，用来接收它的返回值
+    # 正常用例-登录成功 fixture的函数名称作为用例参数，用来接收fixture的返回值
     @pytest.mark.smoke
-    def test_login_1_success(self, access_web): # fixture的函数名称作为用例参数，用来接收fixture的返回值
+    def test_login_2_success(self, access_web): # fixture的函数名称作为用例参数，用来接收fixture的返回值
+        logging.info("*********登录用例：正常场景：使用正确的用户名和密码登录******")
         # 步骤  输入用户名：XXX  密码：XXX 点击登录
         access_web[1].login(LD.success_data["user"], LD.success_data["password"])
         # 断言  首页当中-能否找到 退出 这个元素
@@ -49,24 +50,29 @@ class TestLogin:
     # 异常用例-手机号码格式不正确(大于11位、小于11位、为空、不在号码段) ddt
     # @ddt.data(*LD.phone_data)
     @pytest.mark.parametrize("data", LD.phone_data)
+    @pytest.mark.myT
     def test_login_0_user_wrongFormat(self, data, access_web):
-        loggig.info("********登录用例：异常场景：没有用户名/没有密码/用户名格式不正确******")
+        logging.info("********登录用例：异常场景：没有用户名/没有密码/用户名格式不正确******")
         # 步骤  输入用户名：XXX  密码：XXX 点击登录
-        self.lg.login(data["user"], data["password"])
+        # self.lg.login(data["user"], data["password"])
+        access_web[1].login(data["user"], data["passwd"])
         # 断言  登录页面 提示：请输入正确的手机号码
         # 登录页面中  -  获取提示框的文本内容
         # 比对文本内容 与  期望的值 是否相等
-        self.assertEqual(self.lg.get_errorMsg_from_loginArea(), data["check"])
+        # self.assertEqual(self.lg.get_errorMsg_from_loginArea(), data["check"])
+        assert access_web[1].get_errorMsg_from_loginArea() == data["check"]
 
     # @ddt.data(LD.wrong_data)
     @pytest.mark.parametrize("caseData", LD.wrong_data)
     def test_login_1_wrongLoginInfo(self, caseData, access_web):
-        logging.info("********登录用例：异常场景：错误的密码/用户忘记注册*****")
+        logging.info("********登录用例：异常场景：错误的密码/用户尚未注册*****")
         # 步骤
-        self.lg.login(caseData["user"], caseData["password"])
+        # self.lg.login(caseData["user"], caseData["password"])
+        access_web[1].login(caseData["user"], caseData["password"])
         # 验证-检查点
         try:
-            assert self.lg.get_errorMsg_from_pageCenter() == caseData["check"]
+            # assert self.lg.get_errorMsg_from_pageCenter() == caseData["check"]
+            assert access_web[1].get_errorMsg_from_pageCenter() == caseData["check"]
         except AssertionError:
             logging.exception("断言失败")
             raise
